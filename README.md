@@ -19,7 +19,7 @@ Get a reverse shell within 15 seconds on both Windows or Unix based systems, usi
 - Upload the [RS.ino](RS.ino) script using Arduino IDE.
 - Configure the CnC server with apache, nginx or any web server to listen on port 443 only 
 (you can configure a free SSL certificate by following this guide: https://letsencrypt.org/getting-started/)
-- Put the payload [RS.ps1](RS.ps1) under: **/var/www/html/**
+- Edit the payload [RS.ps1](RS.ps1) by replacing **your domain** with your server IP/Domain, then put the file under: **/var/www/html/**
 - Listen on port 80 at the CnC with a something of your choice. For demo purposes we can use netcat: **nc -lvp 80**
 - Note: the use of 443 and 80 ports grantee not blocking the connection by proxy/IDS, it seems like normal web traffic!
 - Plug the USB in the asset [assuming the owner forgot to lock the desktop] and the digispark will deploy a reverse shell within 15 seconds.
