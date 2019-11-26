@@ -12,6 +12,7 @@ Get a reverse shell within 15 seconds on both Windows or Unix based systems, usi
 
 - Setup your IDE (Arduino) to deploy the code on the Digispark: https://www.arduino.cc/en/Guide/HomePage
 - Get and configure the required libraries from this guide: https://digistump.com/wiki/digispark/tutorials/connecting
+- CnC server (on cloud or on the victim network) - ubuntu/centos server is recommended with port forwarding enabled for (443 & 80).
 
 ## Getting Started
 
