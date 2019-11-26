@@ -5,7 +5,7 @@ Get a reverse shell within 15 seconds on both Windows or Unix based systems, usi
 #### DISCLAIMER: This project is developed for learning and security assessments purposes only. Use these at your own discretion, the author cannot be held responsible for any damages caused. Using this project for attacking assets without prior mutual consent is illegal. The author is not responsible for any misuse or damage caused.     
 
 
-### Prerequisites
+## Prerequisites
 
 - Get the digispark development board, it costs about 6 USD. 
 ![alt text](https://s3.amazonaws.com/digistump-resources/images/l/61e2f14edffc1edfa2685963155b0d33.jpg)
