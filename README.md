@@ -35,6 +35,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-My fellow hackers: Karim Faisal and reb311ion
+Thanks to my fellow hackers: 
+Karim Faisal and reb311ion
 
 
