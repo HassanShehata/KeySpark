@@ -12,13 +12,15 @@ Get a reverse shell within 15 seconds on both Windows or Unix based systems, usi
 
 - Setup your IDE (Arduino) to deploy the code on the Digispark: https://www.arduino.cc/en/Guide/HomePage
 - Get and configure the required libraries from this guide: https://digistump.com/wiki/digispark/tutorials/connecting
+- CnC server (on cloud or on the victim network) - ubuntu/centos server is recommended with port forwarding enabled for (443 & 80).
 
 ## Getting Started
 
-- Upload the RS.ino script using Arduino IDE.
+- Upload the [RS.ino](RS.ino) script using Arduino IDE.
 - Configure the CnC server with apache, nginx or any web server to listen on port 443 only 
 (you can configure a free SSL certificate by following this guide: https://letsencrypt.org/getting-started/)
-- Listen on port 80 at the CnC with something of your choice. For demo purposes we can use netcat: **nc -lvp 80**
+- Put the payload [RS.ps1](RS.ps1) under: **/var/www/html/**
+- Listen on port 80 at the CnC with a something of your choice. For demo purposes we can use netcat: **nc -lvp 80**
 - Note: the use of 443 and 80 ports grantee not blocking the connection by proxy/IDS, it seems like normal web traffic!
 - Plug the USB in the asset [assuming the owner forgot to lock the desktop] and the digispark will deploy a reverse shell within 15 seconds.
 - Remove the digispark and happy hacking !
@@ -33,6 +35,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-My fellow hackers: Karim Faisal and reb311ion
+Thanks to my fellow hackers: 
+Karim Faisal and reb311ion
 
 
