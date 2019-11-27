@@ -37,6 +37,9 @@ This project is developed for learning and security assessments purposes only. U
 
 ## Contact Info
 
+[Linkedin](https://www.linkedin.com/in/hassan-shehata-503272172/)
+[Gmail](hassanshehata25895@gmail.com)
+[Upwork](https://www.upwork.com/freelancers/~01383dad14aca34634)
 
 
 ## Acknowledgments
