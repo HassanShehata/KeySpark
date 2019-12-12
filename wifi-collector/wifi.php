@@ -18,7 +18,7 @@ $data=""; //will contain the collected wifi data
 
 //Verify on POST paramter token
 function verfiy($r_token,$data){
-        $token="1s5d47s98qwASDaw598wD51Dfg47m85C"; //Initialize Token (32 digit)
+        $token="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; //Initialize Token (32 digit)
         //echo "Token is >> ". $r_token. "\n"; //testing
         if ($r_token == $token) {
                 loot(0,$data);
