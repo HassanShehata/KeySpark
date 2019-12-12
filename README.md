@@ -31,7 +31,7 @@ Get a reverse shell within 15 seconds on both Windows and Unix based systems, us
 - Plug the USB in the asset [assuming the owner forgot to lock the desktop] and the `digispark` will deploy a reverse shell within 15 seconds.
 - Remove the `digispark` and happy hacking!
 
-## The WiFi Collector Feature
+## The WiFi Collector 
 
 - Try the new feature for collecting all WiFi credentials from any windows machine within 18 seconds!!
 - Generate a random string of 32 characters that will be used as a token.
