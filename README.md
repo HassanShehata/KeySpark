@@ -34,8 +34,9 @@ Get a reverse shell within 15 seconds on both Windows and Unix based systems, us
 ## The WiFi Collector Feature
 
 - Try the new feature for collecting all WiFi credentials from any windows machine within 18 seconds!!
-- Put [wifi.php](wifi-collector/wifi.php) on the CnC under: `/var/www/html/`
-- Upload the [wifi-collect.ino](wifi-collector/wifi-collect.ino) script using Arduino IDE.
+- Generate a random string of 32 characters that will be used as a token.
+- Add the token to [wifi.php](wifi-collector/wifi.php) then put it on the CnC under: `/var/www/html/`
+- Edit the token parameter in the [wifi-collect.ino](wifi-collector/wifi-collect.ino). then Upload it using Arduino IDE.
 - Plug the USB in the asset [assuming the owner forgot to lock the desktop again!]
 - The data will be transfered through a POST request on 443. Then the WiFi credentials will be found under `loot.txt` file on the CnC.
 
