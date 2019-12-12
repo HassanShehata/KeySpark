@@ -31,6 +31,14 @@ Get a reverse shell within 15 seconds on both Windows and Unix based systems, us
 - Plug the USB in the asset [assuming the owner forgot to lock the desktop] and the `digispark` will deploy a reverse shell within 15 seconds.
 - Remove the `digispark` and happy hacking!
 
+## The WiFi Collector Feature
+
+- Try the new feature for collecting all WiFi credentials from any windows machine within 18 seconds!!
+- Put [wifi-collector/wifi.php](wifi.php) on the CnC under: `/var/www/html/`
+- Upload the [wifi-collector/wifi-collect.ino](wifi-collect.ino) script usin Arduino IDE.
+- Plug the USB in the asset [assuming the owner forgot to lock the desktop again!]
+- The data will be transfered through a POST request on 443. Then the WiFi credentials will be found under `loot.txt` file on the CnC.
+
 ## DISCLAIMER
 
 This project is developed for learning and security assessments purposes only. Use these at your own discretion, the author cannot be held responsible for any damages caused. Using this project for attacking assets without prior mutual consent is illegal. The author is not responsible for any misuse or damage caused.
